@@ -1,2 +1,5 @@
 FROM node
-COPY source dest
+WORKDIR /app
+COPY ./package*.json ./
+RUN npm install
+COPY . .
